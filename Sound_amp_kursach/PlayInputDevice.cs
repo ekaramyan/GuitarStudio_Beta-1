@@ -10,7 +10,7 @@ namespace Sound_amp_kursach
 {
     class PlayInputDevice
     {
-        static void play()
+        static void EQ()
         {
             Console.WriteLine("The following sample will use the default input device");
             Console.WriteLine("and will play its input data on the default output device.");
