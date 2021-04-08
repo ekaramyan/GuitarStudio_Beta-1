@@ -28,23 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.volume_bar = new System.Windows.Forms.TrackBar();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.Play_button = new System.Windows.Forms.Button();
             this.Pause_button = new System.Windows.Forms.Button();
             this.Record_button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.Live_play = new System.Windows.Forms.Button();
+            this.Stop_button = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.volume_bar)).BeginInit();
             this.SuspendLayout();
             // 
-            // trackBar1
+            // volume_bar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(12, 45);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 260);
-            this.trackBar1.TabIndex = 0;
+            this.volume_bar.BackColor = System.Drawing.SystemColors.Control;
+            this.volume_bar.Location = new System.Drawing.Point(12, 45);
+            this.volume_bar.Name = "volume_bar";
+            this.volume_bar.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.volume_bar.Size = new System.Drawing.Size(45, 260);
+            this.volume_bar.TabIndex = 0;
+            this.volume_bar.ValueChanged += new System.EventHandler(this.Volume_bar_ValueChanged);
             // 
             // checkBox1
             // 
@@ -78,47 +83,85 @@
             // 
             // Play_button
             // 
-            this.Play_button.Location = new System.Drawing.Point(257, 161);
+            this.Play_button.Location = new System.Drawing.Point(194, 124);
             this.Play_button.Name = "Play_button";
             this.Play_button.Size = new System.Drawing.Size(75, 71);
             this.Play_button.TabIndex = 2;
             this.Play_button.Text = "Play";
             this.Play_button.UseVisualStyleBackColor = true;
+            this.Play_button.Click += new System.EventHandler(this.Play_button_Click);
             // 
             // Pause_button
             // 
-            this.Pause_button.Location = new System.Drawing.Point(338, 161);
+            this.Pause_button.Location = new System.Drawing.Point(343, 124);
             this.Pause_button.Name = "Pause_button";
             this.Pause_button.Size = new System.Drawing.Size(75, 71);
             this.Pause_button.TabIndex = 2;
             this.Pause_button.Text = "Pause";
             this.Pause_button.UseVisualStyleBackColor = true;
+            this.Pause_button.Click += new System.EventHandler(this.Pause_button_Click);
             // 
             // Record_button
             // 
-            this.Record_button.Location = new System.Drawing.Point(419, 161);
+            this.Record_button.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Record_button.Location = new System.Drawing.Point(420, 234);
             this.Record_button.Name = "Record_button";
             this.Record_button.Size = new System.Drawing.Size(75, 71);
             this.Record_button.TabIndex = 2;
             this.Record_button.Text = "REC";
             this.Record_button.UseVisualStyleBackColor = true;
             // 
+            // Live_play
+            // 
+            this.Live_play.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Live_play.Location = new System.Drawing.Point(268, 234);
+            this.Live_play.Name = "Live_play";
+            this.Live_play.Size = new System.Drawing.Size(75, 71);
+            this.Live_play.TabIndex = 2;
+            this.Live_play.Text = "Live_play";
+            this.Live_play.UseVisualStyleBackColor = true;
+            this.Live_play.Click += new System.EventHandler(this.Live_play_Click);
+            // 
+            // Stop_button
+            // 
+            this.Stop_button.Location = new System.Drawing.Point(497, 124);
+            this.Stop_button.Name = "Stop_button";
+            this.Stop_button.Size = new System.Drawing.Size(75, 71);
+            this.Stop_button.TabIndex = 2;
+            this.Stop_button.Text = "Stop";
+            this.Stop_button.UseVisualStyleBackColor = true;
+            this.Stop_button.Click += new System.EventHandler(this.Stop_button_Click);
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(12, 12);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.TabIndex = 3;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.Live_play);
             this.Controls.Add(this.Record_button);
+            this.Controls.Add(this.Stop_button);
             this.Controls.Add(this.Pause_button);
             this.Controls.Add(this.Play_button);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.volume_bar);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.volume_bar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,13 +169,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar volume_bar;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Button Play_button;
         private System.Windows.Forms.Button Pause_button;
         private System.Windows.Forms.Button Record_button;
+        private System.Windows.Forms.Button Live_play;
+        private System.Windows.Forms.Button Stop_button;
+        private System.Windows.Forms.Button btnOpen;
     }
 }
 

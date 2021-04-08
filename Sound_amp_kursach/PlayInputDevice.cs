@@ -12,6 +12,11 @@ namespace Sound_amp_kursach
     {
         static void EQ()
         {
+            Foo();
+        }
+        /*
+        static void EQ()
+        {
             Console.WriteLine("The following sample will use the default input device");
             Console.WriteLine("and will play its input data on the default output device.");
             Console.WriteLine("In addition, this sample will apply an echo effect.");
@@ -20,7 +25,7 @@ namespace Sound_amp_kursach
 
             Foo();
         }
-
+        */
         static void Foo()
         {
             //create a new soundIn instance for using input devices
@@ -55,8 +60,8 @@ namespace Sound_amp_kursach
                         //play
                         soundOut.Play();
 
-                        Console.WriteLine("Press any key to exit the program.");
-                        Console.ReadKey();
+                        //Console.WriteLine("Press any key to exit the program.");
+                        //Console.ReadKey();
                     }
                 }
             }
