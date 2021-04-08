@@ -60,7 +60,7 @@ namespace Sound_amp_kursach
 
         private void Live_play_Click(object sender, EventArgs e)
         {
-            using (var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30))
+           using (var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30))
             {
                 soundIn.Initialize();
                 IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };

@@ -6,6 +6,8 @@ using CSCore.SoundOut;
 using CSCore.Streams;
 using CSCore.Streams.Effects;
 
+/*проигрывает входящий сигнал, хз почему не работает*/
+
 namespace Sound_amp_kursach
 {
     class PlayInputDevice
