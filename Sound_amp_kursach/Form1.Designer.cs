@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.volume_bar = new System.Windows.Forms.TrackBar();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.Play_button = new System.Windows.Forms.Button();
             this.Pause_button = new System.Windows.Forms.Button();
-            this.Record_button = new System.Windows.Forms.Button();
-            this.Live_play = new System.Windows.Forms.Button();
             this.Stop_button = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.volume_bar)).BeginInit();
@@ -47,39 +42,9 @@
             this.volume_bar.Location = new System.Drawing.Point(12, 45);
             this.volume_bar.Name = "volume_bar";
             this.volume_bar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.volume_bar.Size = new System.Drawing.Size(45, 260);
+            this.volume_bar.Size = new System.Drawing.Size(45, 367);
             this.volume_bar.TabIndex = 0;
             this.volume_bar.ValueChanged += new System.EventHandler(this.Volume_bar_ValueChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(110, 364);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(338, 364);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "checkBox1";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(581, 364);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 1;
-            this.checkBox3.Text = "checkBox1";
-            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // Play_button
             // 
@@ -100,27 +65,6 @@
             this.Pause_button.Text = "Pause";
             this.Pause_button.UseVisualStyleBackColor = true;
             this.Pause_button.Click += new System.EventHandler(this.Pause_button_Click);
-            // 
-            // Record_button
-            // 
-            this.Record_button.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Record_button.Location = new System.Drawing.Point(420, 234);
-            this.Record_button.Name = "Record_button";
-            this.Record_button.Size = new System.Drawing.Size(75, 71);
-            this.Record_button.TabIndex = 2;
-            this.Record_button.Text = "REC";
-            this.Record_button.UseVisualStyleBackColor = true;
-            // 
-            // Live_play
-            // 
-            this.Live_play.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Live_play.Location = new System.Drawing.Point(268, 234);
-            this.Live_play.Name = "Live_play";
-            this.Live_play.Size = new System.Drawing.Size(75, 71);
-            this.Live_play.TabIndex = 2;
-            this.Live_play.Text = "Live_play";
-            this.Live_play.UseVisualStyleBackColor = true;
-            this.Live_play.Click += new System.EventHandler(this.Live_play_Click);
             // 
             // Stop_button
             // 
@@ -149,14 +93,9 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.Live_play);
-            this.Controls.Add(this.Record_button);
             this.Controls.Add(this.Stop_button);
             this.Controls.Add(this.Pause_button);
             this.Controls.Add(this.Play_button);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.volume_bar);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -170,13 +109,8 @@
         #endregion
 
         private System.Windows.Forms.TrackBar volume_bar;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Button Play_button;
         private System.Windows.Forms.Button Pause_button;
-        private System.Windows.Forms.Button Record_button;
-        private System.Windows.Forms.Button Live_play;
         private System.Windows.Forms.Button Stop_button;
         private System.Windows.Forms.Button btnOpen;
     }
