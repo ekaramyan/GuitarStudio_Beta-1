@@ -19,6 +19,7 @@ using CSCore.Codecs;
 
 
 
+
 namespace Sound_amp_kursach
 {
 
@@ -56,8 +57,11 @@ namespace Sound_amp_kursach
                 }
             }
 
+            comboBox1.DataSource = _devices;
+            comboBox1.DisplayMember = "FriendlyName";
+            comboBox1.ValueMember = "DeviceID";
         }
-
+        /*
         private void Live_play_Click(object sender, EventArgs e)
         {
            using (var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30))
@@ -74,7 +78,7 @@ namespace Sound_amp_kursach
                     }
                 }
             }
-        }
+        }*/
         private void Volume_bar_ValueChanged(object sender, EventArgs e)
         {
             _Player.Volume = volume_bar.Value;
@@ -119,6 +123,7 @@ namespace Sound_amp_kursach
             {
                 try
                 {
+                    _Player.Open(openFileDialog.FileName, (MMDevice)comboBox1.SelectedItem);
                     volume_bar.Value = _Player.Volume;
 
                     Play_button.Enabled = true;
@@ -130,6 +135,53 @@ namespace Sound_amp_kursach
                 }
             }
         }
+        private void trackBar1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                _stopSliderUpdate = true;
+        }
 
+        private void trackBar1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                _stopSliderUpdate = false;
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            if (_stopSliderUpdate)
+            {
+                double perc = trackBar1.Value / (double)trackBar1.Maximum;
+                TimeSpan position = TimeSpan.FromMilliseconds(_Player.Length.TotalMilliseconds * perc);
+                _Player.Position = position;
+            }
+        }
+
+        private void Timer1_Tick_1(object sender, EventArgs e)
+        {
+            TimeSpan position = _Player.Position;
+            TimeSpan length = _Player.Length;
+            if (position > length)
+                length = position;
+
+            lblPosition.Text = String.Format(@"{0:mm\:ss} / {1:mm\:ss}", position, length);
+
+            if (!_stopSliderUpdate &&
+                length != TimeSpan.Zero && position != TimeSpan.Zero)
+            {
+                double perc = position.TotalMilliseconds / length.TotalMilliseconds * trackBar1.Maximum;
+                trackBar1.Value = (int)perc;
+            }
+        }
+
+        private void LblPosition_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

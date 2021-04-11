@@ -19,7 +19,10 @@ namespace Sound_amp_kursach
 
         private void Rec_btn_Click(object sender, EventArgs e)
         {
-
+            Start_Form.ActiveForm.Hide();
+            Recorder Player_form = new Recorder();
+            Player_form.ShowDialog();
+            Close();
         }
 
         private void Player_btn_Click(object sender, EventArgs e)
