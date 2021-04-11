@@ -86,6 +86,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LivePlay_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivePlay_Form.Designer.cs">
+      <DependentUpon>LivePlay_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LivePlay_Form.resx">
+      <DependentUpon>LivePlay_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

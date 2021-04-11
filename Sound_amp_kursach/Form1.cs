@@ -44,7 +44,6 @@ namespace Sound_amp_kursach
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            //PlayInputDevice play = new PlayInputDevice();
             using (var mmdeviceEnumerator = new MMDeviceEnumerator())
             {
                 using (

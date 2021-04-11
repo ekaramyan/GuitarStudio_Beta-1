@@ -1,4 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using CSCore;
 using CSCore.CoreAudioAPI;
 using CSCore.SoundIn;
@@ -6,13 +14,21 @@ using CSCore.SoundOut;
 using CSCore.Streams;
 using CSCore.Streams.Effects;
 
-/*проигрывает входящий сигнал, хз почему не работает*/
-
 namespace Sound_amp_kursach
 {
-    class PlayInputDevice
+    public partial class LivePlay_Form : Form
     {
-     /*   static void LivePlay_form()
+        
+        public LivePlay_Form()
+        {
+            InitializeComponent();
+        }
+
+        private void LivePlay_Form_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void Play_btn_Click(object sender, EventArgs e)
         {
             Foo();
         }
@@ -22,16 +38,19 @@ namespace Sound_amp_kursach
             {
                 soundIn.Initialize();
                 IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };
-                using (var echoSource = new DmoChorusEffect(source))
+                using (var eSource = new DmoCompressorEffect(source))
                 {
                     soundIn.Start();
                     using (var soundOut = new WasapiOut())
                     {
-                        soundOut.Initialize(echoSource);
+                        soundOut.Initialize(eSource);
                         soundOut.Play();
                     }
                 }
             }
-        }*/
+        }
+        private void Stop_btn_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

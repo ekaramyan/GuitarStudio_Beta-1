@@ -20,8 +20,8 @@ namespace Sound_amp_kursach
         private void Rec_btn_Click(object sender, EventArgs e)
         {
             Start_Form.ActiveForm.Hide();
-            Recorder Player_form = new Recorder();
-            Player_form.ShowDialog();
+            Recorder Recorder_form = new Recorder();
+            Recorder_form.ShowDialog();
             Close();
         }
 
@@ -35,7 +35,10 @@ namespace Sound_amp_kursach
 
         private void Liveplay_btn_Click(object sender, EventArgs e)
         {
-            
+            Start_Form.ActiveForm.Hide();
+            LivePlay_Form LivePlay_form = new LivePlay_Form();
+            LivePlay_form.ShowDialog();
+            Close();
         }
     }
 }
