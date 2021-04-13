@@ -159,6 +159,15 @@ namespace Sound_amp_kursach
             base.OnClosing(e);
             StopCapture();
         }
+
+        private void Back_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Hide();
+            Start_Form Start_Form = new Start_Form();
+            Start_Form.ShowDialog();
+            Close();
+        }
     }
 
     public enum CaptureMode

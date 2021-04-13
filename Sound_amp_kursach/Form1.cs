@@ -182,5 +182,14 @@ namespace Sound_amp_kursach
         {
 
         }
+
+        private void Back_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Hide();
+            Start_Form Start_Form = new Start_Form();
+            Start_Form.ShowDialog();
+            Close();
+        }
     }
 }

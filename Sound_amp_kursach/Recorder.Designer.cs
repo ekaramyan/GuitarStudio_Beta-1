@@ -34,6 +34,7 @@
             this.deviceList = new System.Windows.Forms.ListView();
             this.columnName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnChannels = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.back_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStart
@@ -99,11 +100,22 @@
             // 
             this.columnChannels.Text = "Channels";
             // 
+            // back_btn
+            // 
+            this.back_btn.Location = new System.Drawing.Point(12, 415);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(46, 23);
+            this.back_btn.TabIndex = 10;
+            this.back_btn.Text = "Back";
+            this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.Back_btn_Click);
+            // 
             // Recorder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.back_btn);
             this.Controls.Add(this.btnRefreshDevices);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.ListView deviceList;
         private System.Windows.Forms.ColumnHeader columnName;
         private System.Windows.Forms.ColumnHeader columnChannels;
+        private System.Windows.Forms.Button back_btn;
     }
 }
