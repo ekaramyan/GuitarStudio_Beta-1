@@ -42,9 +42,10 @@
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStart.Enabled = false;
-            this.btnStart.Location = new System.Drawing.Point(585, 12);
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Location = new System.Drawing.Point(688, 27);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(203, 23);
+            this.btnStart.Size = new System.Drawing.Size(100, 23);
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Start recording";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -55,9 +56,10 @@
             this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStop.Enabled = false;
-            this.btnStop.Location = new System.Drawing.Point(585, 50);
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop.Location = new System.Drawing.Point(688, 56);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(203, 23);
+            this.btnStop.Size = new System.Drawing.Size(100, 23);
             this.btnStop.TabIndex = 2;
             this.btnStop.Text = "Stop recording";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -67,9 +69,10 @@
             // 
             this.btnRefreshDevices.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefreshDevices.Location = new System.Drawing.Point(585, 415);
+            this.btnRefreshDevices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshDevices.Location = new System.Drawing.Point(688, 415);
             this.btnRefreshDevices.Name = "btnRefreshDevices";
-            this.btnRefreshDevices.Size = new System.Drawing.Size(203, 23);
+            this.btnRefreshDevices.Size = new System.Drawing.Size(100, 23);
             this.btnRefreshDevices.TabIndex = 3;
             this.btnRefreshDevices.Text = "Refresh devices";
             this.btnRefreshDevices.UseVisualStyleBackColor = true;
@@ -77,10 +80,16 @@
             // 
             // deviceList
             // 
+            this.deviceList.BackColor = System.Drawing.Color.LightGray;
+            this.deviceList.BackgroundImage = global::Sound_amp_kursach.Properties.Resources.Recorder_back;
+            this.deviceList.BackgroundImageTiled = true;
+            this.deviceList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.deviceList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnName,
             this.columnChannels});
             this.deviceList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.deviceList.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.deviceList.FullRowSelect = true;
             this.deviceList.HideSelection = false;
             this.deviceList.Location = new System.Drawing.Point(0, 0);
             this.deviceList.MultiSelect = false;
@@ -102,6 +111,7 @@
             // 
             // back_btn
             // 
+            this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.back_btn.Location = new System.Drawing.Point(12, 415);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(46, 23);

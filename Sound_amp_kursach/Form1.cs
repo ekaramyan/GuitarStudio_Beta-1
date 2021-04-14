@@ -60,24 +60,7 @@ namespace Sound_amp_kursach
             comboBox1.DisplayMember = "FriendlyName";
             comboBox1.ValueMember = "DeviceID";
         }
-        /*
-        private void Live_play_Click(object sender, EventArgs e)
-        {
-           using (var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30))
-            {
-                soundIn.Initialize();
-                IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };
-                using (var echoSource = new DmoEchoEffect(source))
-                {
-                    soundIn.Start();
-                    using (var soundOut = new WasapiOut())
-                    {
-                        soundOut.Initialize(echoSource);
-                        soundOut.Play();
-                    }
-                }
-            }
-        }*/
+       
         private void Volume_bar_ValueChanged(object sender, EventArgs e)
         {
             _Player.Volume = volume_bar.Value;
