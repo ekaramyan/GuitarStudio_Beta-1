@@ -46,16 +46,21 @@
             // 
             // volume_bar
             // 
-            this.volume_bar.BackColor = System.Drawing.SystemColors.Control;
+            this.volume_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.volume_bar.Location = new System.Drawing.Point(12, 45);
             this.volume_bar.Name = "volume_bar";
             this.volume_bar.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.volume_bar.Size = new System.Drawing.Size(45, 291);
             this.volume_bar.TabIndex = 0;
+            this.volume_bar.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.volume_bar.ValueChanged += new System.EventHandler(this.Volume_bar_ValueChanged);
             // 
             // Play_button
             // 
+            this.Play_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.Play_button.FlatAppearance.BorderSize = 2;
+            this.Play_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Play_button.ForeColor = System.Drawing.Color.White;
             this.Play_button.Location = new System.Drawing.Point(202, 377);
             this.Play_button.Name = "Play_button";
             this.Play_button.Size = new System.Drawing.Size(75, 70);
@@ -66,6 +71,10 @@
             // 
             // Pause_button
             // 
+            this.Pause_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.Pause_button.FlatAppearance.BorderSize = 2;
+            this.Pause_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Pause_button.ForeColor = System.Drawing.Color.White;
             this.Pause_button.Location = new System.Drawing.Point(329, 376);
             this.Pause_button.Name = "Pause_button";
             this.Pause_button.Size = new System.Drawing.Size(75, 71);
@@ -76,6 +85,10 @@
             // 
             // Stop_button
             // 
+            this.Stop_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.Stop_button.FlatAppearance.BorderSize = 2;
+            this.Stop_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Stop_button.ForeColor = System.Drawing.Color.White;
             this.Stop_button.Location = new System.Drawing.Point(462, 376);
             this.Stop_button.Name = "Stop_button";
             this.Stop_button.Size = new System.Drawing.Size(75, 71);
@@ -86,6 +99,10 @@
             // 
             // btnOpen
             // 
+            this.btnOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.btnOpen.FlatAppearance.BorderSize = 2;
+            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpen.ForeColor = System.Drawing.Color.White;
             this.btnOpen.Location = new System.Drawing.Point(63, 12);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 23);
@@ -100,12 +117,14 @@
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(652, 45);
             this.trackBar1.TabIndex = 4;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             this.trackBar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trackBar1_MouseDown);
             this.trackBar1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.trackBar1_MouseUp);
             // 
             // comboBox1
             // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 417);
             this.comboBox1.Name = "comboBox1";
@@ -116,6 +135,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(13, 398);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
@@ -137,6 +157,10 @@
             // 
             // back_btn
             // 
+            this.back_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.back_btn.FlatAppearance.BorderSize = 2;
+            this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back_btn.ForeColor = System.Drawing.Color.White;
             this.back_btn.Location = new System.Drawing.Point(11, 12);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(46, 23);
@@ -149,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.lblPosition);

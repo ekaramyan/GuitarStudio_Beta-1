@@ -81,7 +81,7 @@
             // deviceList
             // 
             this.deviceList.BackColor = System.Drawing.Color.LightGray;
-            this.deviceList.BackgroundImage = global::Sound_amp_kursach.Properties.Resources.Recorder_back;
+            ///this.deviceList.BackgroundImage = global::Sound_amp_kursach.Properties.Resources.Recorder_back;
             this.deviceList.BackgroundImageTiled = true;
             this.deviceList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.deviceList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
