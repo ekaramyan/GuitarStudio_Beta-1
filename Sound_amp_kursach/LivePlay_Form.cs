@@ -19,16 +19,10 @@ namespace Sound_amp_kursach
 {
     public partial class LivePlay_Form : Form
     {
+        private readonly Live_Play _play = new Live_Play();
+        private readonly Effecter _effects = new Effecter();
         private WasapiCapture capture = null;
         private WaveWriter w = null;
-        public Single InGain;
-        public Single Gain;
-        public Single Edge;
-        public Single PreLowpassCutoff;
-        public Single Delay;
-        public Single Depth;
-        public Single PostEQCenterFrequency;
-        public Single PostEQBandwidth;
         public LivePlay_Form()
         {
             InitializeComponent();
@@ -41,28 +35,13 @@ namespace Sound_amp_kursach
         }
         private void Play_btn_Click(object sender, EventArgs e)
         {
-            Play();
-        }
-        void Play()
-        {
-            //using (var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30))
+            try
             {
-                try
-                {
-                    //var soundIn = new WasapiLoopbackCapture();
-                    var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30);
-                    soundIn.Initialize();
-                    IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };
-                    var eSource = new DmoCompressorEffect(source);
-                    soundIn.Start();
-                    var soundOut = new WasapiOut();
-                    soundOut.Initialize(eSource);
-                    soundOut.Play();
-                }
-                catch (Exception exp)
-                {
-                    MessageBox.Show(exp.Message);
-                }
+                _play.play();
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
             }
         }
 
@@ -92,15 +71,7 @@ namespace Sound_amp_kursach
         {
                 try
                 {
-                    var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30);
-                    soundIn.Initialize();
-                    IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };
-                    InGain = 10;
-                    var eSource = new DmoWavesReverbEffect(source);
-                    soundIn.Start();
-                    var soundOut = new WasapiOut();
-                    soundOut.Initialize(eSource);
-                    soundOut.Play();
+                _effects.Rever();
                 }
                 catch (Exception exp)
                 {
@@ -112,17 +83,7 @@ namespace Sound_amp_kursach
         {
             try
             {
-                var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30);
-                soundIn.Initialize();
-                IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };
-                Gain = 200;
-                Edge = 155;
-                PreLowpassCutoff = 56;
-                var eSource = new DmoDistortionEffect(source);
-                soundIn.Start();
-                var soundOut = new WasapiOut();
-                soundOut.Initialize(eSource);
-                soundOut.Play();
+                _effects.Distortion();   
             }
             catch (Exception exp)
             {
@@ -134,16 +95,7 @@ namespace Sound_amp_kursach
         {
             try
             {
-                var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30);
-                soundIn.Initialize();
-                IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };
-                Delay = 10;
-                Depth = 10;
-                var eSource = new DmoChorusEffect(source);
-                soundIn.Start();
-                var soundOut = new WasapiOut();
-                soundOut.Initialize(eSource);
-                soundOut.Play();
+                _effects.Chorus();
             }
             catch (Exception exp)
             {
