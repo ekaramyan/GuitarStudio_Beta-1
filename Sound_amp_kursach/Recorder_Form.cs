@@ -12,7 +12,7 @@ using CSCore.Win32;
 
 namespace Sound_amp_kursach
 {
-    public partial class Recorder : Form
+    public partial class Recorder_Form : Form
     {
          //private readonly Devices _devices = new Devices();
         //Change this to CaptureMode.Capture to capture a microphone,...
@@ -39,7 +39,7 @@ namespace Sound_amp_kursach
 
         public static CaptureMode CaptureMode2 => CaptureMode;
 
-        public Recorder()
+        public Recorder_Form()
         {
             InitializeComponent();
         }

@@ -89,11 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Recorder.cs">
+    <Compile Include="Recorder_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recorder.Designer.cs">
-      <DependentUpon>Recorder.cs</DependentUpon>
+    <Compile Include="Recorder_Form.Designer.cs">
+      <DependentUpon>Recorder_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Start_Form.cs">
       <SubType>Form</SubType>
@@ -113,8 +113,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Recorder.resx">
-      <DependentUpon>Recorder.cs</DependentUpon>
+    <EmbeddedResource Include="Recorder_Form.resx">
+      <DependentUpon>Recorder_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start_Form.resx">
       <DependentUpon>Start_Form.cs</DependentUpon>
@@ -135,6 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Icons\Recorder_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\Start.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

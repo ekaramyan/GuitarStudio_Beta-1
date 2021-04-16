@@ -20,7 +20,7 @@ namespace Sound_amp_kursach
         private void Rec_btn_Click(object sender, EventArgs e)
         {
             Start_Form.ActiveForm.Hide();
-            Recorder Recorder_form = new Recorder();
+            Recorder_Form Recorder_form = new Recorder_Form();
             Recorder_form.ShowDialog();
             Close();
         }

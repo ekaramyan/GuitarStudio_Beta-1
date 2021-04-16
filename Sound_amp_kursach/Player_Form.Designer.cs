@@ -46,8 +46,8 @@
             // 
             // volume_bar
             // 
-            this.volume_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.volume_bar.Location = new System.Drawing.Point(12, 45);
+            this.volume_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.volume_bar.Location = new System.Drawing.Point(11, 52);
             this.volume_bar.Name = "volume_bar";
             this.volume_bar.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.volume_bar.Size = new System.Drawing.Size(45, 291);
@@ -57,11 +57,12 @@
             // 
             // Play_button
             // 
-            this.Play_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.Play_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.Play_button.FlatAppearance.BorderSize = 2;
             this.Play_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Play_button.ForeColor = System.Drawing.Color.White;
-            this.Play_button.Location = new System.Drawing.Point(202, 377);
+            this.Play_button.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Play_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Play_button.Location = new System.Drawing.Point(228, 375);
             this.Play_button.Name = "Play_button";
             this.Play_button.Size = new System.Drawing.Size(75, 70);
             this.Play_button.TabIndex = 2;
@@ -71,11 +72,12 @@
             // 
             // Pause_button
             // 
-            this.Pause_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.Pause_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.Pause_button.FlatAppearance.BorderSize = 2;
             this.Pause_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Pause_button.ForeColor = System.Drawing.Color.White;
-            this.Pause_button.Location = new System.Drawing.Point(329, 376);
+            this.Pause_button.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Pause_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Pause_button.Location = new System.Drawing.Point(337, 375);
             this.Pause_button.Name = "Pause_button";
             this.Pause_button.Size = new System.Drawing.Size(75, 71);
             this.Pause_button.TabIndex = 2;
@@ -85,13 +87,14 @@
             // 
             // Stop_button
             // 
-            this.Stop_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.Stop_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.Stop_button.FlatAppearance.BorderSize = 2;
             this.Stop_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Stop_button.ForeColor = System.Drawing.Color.White;
-            this.Stop_button.Location = new System.Drawing.Point(462, 376);
+            this.Stop_button.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Stop_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Stop_button.Location = new System.Drawing.Point(452, 374);
             this.Stop_button.Name = "Stop_button";
-            this.Stop_button.Size = new System.Drawing.Size(75, 71);
+            this.Stop_button.Size = new System.Drawing.Size(75, 73);
             this.Stop_button.TabIndex = 2;
             this.Stop_button.Text = "Stop";
             this.Stop_button.UseVisualStyleBackColor = true;
@@ -99,10 +102,11 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.btnOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btnOpen.FlatAppearance.BorderSize = 2;
             this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpen.ForeColor = System.Drawing.Color.White;
+            this.btnOpen.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.btnOpen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnOpen.Location = new System.Drawing.Point(63, 12);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 23);
@@ -115,7 +119,7 @@
             // 
             this.trackBar1.Location = new System.Drawing.Point(63, 326);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(652, 45);
+            this.trackBar1.Size = new System.Drawing.Size(693, 45);
             this.trackBar1.TabIndex = 4;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
@@ -124,21 +128,25 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 417);
+            this.comboBox1.Location = new System.Drawing.Point(11, 417);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(13, 398);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.Size = new System.Drawing.Size(92, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Output Device:";
             // 
@@ -157,10 +165,11 @@
             // 
             // back_btn
             // 
-            this.back_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.back_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.back_btn.FlatAppearance.BorderSize = 2;
             this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back_btn.ForeColor = System.Drawing.Color.White;
+            this.back_btn.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.back_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.back_btn.Location = new System.Drawing.Point(11, 12);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(46, 23);
@@ -169,11 +178,11 @@
             this.back_btn.UseVisualStyleBackColor = true;
             this.back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
-            // Form1
+            // Player_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.lblPosition);
@@ -185,7 +194,7 @@
             this.Controls.Add(this.Pause_button);
             this.Controls.Add(this.Play_button);
             this.Controls.Add(this.volume_bar);
-            this.Name = "Form1";
+            this.Name = "Player_Form";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.volume_bar)).EndInit();
