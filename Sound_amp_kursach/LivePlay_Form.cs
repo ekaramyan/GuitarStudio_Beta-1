@@ -19,10 +19,10 @@ namespace Sound_amp_kursach
 {
     public partial class LivePlay_Form : Form
     {
-        private readonly Live_Play _play = new Live_Play();
+        private readonly Live_Play _live = new Live_Play();
         private readonly Effecter _effects = new Effecter();
-        private WasapiCapture capture = null;
-        private WaveWriter w = null;
+        //private WasapiCapture capture = null;
+        //private WaveWriter w = null;
         public LivePlay_Form()
         {
             InitializeComponent();
@@ -37,16 +37,18 @@ namespace Sound_amp_kursach
         {
             try
             {
-                _play.play();
+                _live.play();
             }
             catch (Exception exp)
             {
                 MessageBox.Show(exp.Message);
             }
         }
-
+        
         private void Stop_btn_Click(object sender, EventArgs e)
         {
+            _live.stop();
+            /*
             if (w != null && capture != null)
             {
                 //stop recording 
@@ -55,7 +57,7 @@ namespace Sound_amp_kursach
                 w = null;
                 capture.Dispose();
                 capture = null;
-            }
+            }*/
         }
 
         private void Back_btn_Click(object sender, EventArgs e)

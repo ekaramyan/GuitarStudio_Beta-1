@@ -18,6 +18,9 @@ namespace Sound_amp_kursach
 {
    public class Live_Play : Component
     {
+        private WasapiCapture capture = null;
+        private WaveWriter w = null;
+        //public var SoundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30);
         public void play()
         {
             var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30);
@@ -29,6 +32,18 @@ namespace Sound_amp_kursach
             soundOut.Initialize(eSource);
             soundOut.Play();
         }
-            
+        public void stop()
+        {
+            if (w != null && capture != null)
+            {
+                //stop recording 
+                capture.Stop();
+                w.Dispose();
+                w = null;
+                capture.Dispose();
+                capture = null;
+            }
+        }
+
     }
 }

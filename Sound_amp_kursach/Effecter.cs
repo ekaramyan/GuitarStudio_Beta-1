@@ -33,6 +33,7 @@ namespace Sound_amp_kursach
             var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30);
             soundIn.Initialize();
             IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };
+            PreLowpassCutoff = 56;
             InGain = 10;
             var eSource = new DmoWavesReverbEffect(source);
             soundIn.Start();
@@ -59,6 +60,7 @@ namespace Sound_amp_kursach
             var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30);
             soundIn.Initialize();
             IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };
+            PreLowpassCutoff = 56;
             Delay = 10;
             Depth = 10;
             var eSource = new DmoChorusEffect(source);
