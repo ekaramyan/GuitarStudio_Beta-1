@@ -64,11 +64,11 @@
     <Compile Include="Effecter.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Player_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Player_Form.Designer.cs">
+      <DependentUpon>Player_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="LivePlay_Form.cs">
       <SubType>Form</SubType>
@@ -101,8 +101,9 @@
     <Compile Include="Start_Form.Designer.cs">
       <DependentUpon>Start_Form.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Visualization.cs" />
+    <EmbeddedResource Include="Player_Form.resx">
+      <DependentUpon>Player_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LivePlay_Form.resx">
       <DependentUpon>LivePlay_Form.cs</DependentUpon>

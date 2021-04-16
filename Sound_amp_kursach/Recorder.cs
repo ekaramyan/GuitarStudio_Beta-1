@@ -21,7 +21,7 @@ namespace Sound_amp_kursach
         private MMDevice _selectedDevice;
         private WasapiCapture _soundIn;
         private IWriteable _writer;
-        //private readonly GraphVisualization _graphVisualization = new GraphVisualization();
+        private readonly Visualization _Visualization = new Visualization();
         private IWaveSource _finalSource;
 
         public MMDevice SelectedDevice
@@ -90,9 +90,14 @@ namespace Sound_amp_kursach
                     _writer.Write(buffer, 0, read);
             };
 
-            //singleBlockNotificationStream.SingleBlockRead += SingleBlockNotificationStreamOnSingleBlockRead;
+            singleBlockNotificationStream.SingleBlockRead += SingleBlockNotificationStreamOnSingleBlockRead;
 
             _soundIn.Start();
+        }
+
+        private void SingleBlockNotificationStreamOnSingleBlockRead(object sender, SingleBlockReadEventArgs e)
+        {
+            _Visualization.AddSamples(e.Left, e.Right);
         }
 
         private static WaveFormat WaveFormatFromBlob(Blob blob)
@@ -154,6 +159,13 @@ namespace Sound_amp_kursach
                 SelectedDevice = null;
             }
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            var image = pictureBox1.Image;
+            pictureBox1.Image = _Visualization.Draw(pictureBox1.Width, pictureBox1.Height);
+            if (image != null)
+                image.Dispose();
+        }
 
         protected override void OnClosing(CancelEventArgs e)
         {
@@ -168,6 +180,11 @@ namespace Sound_amp_kursach
             Start_Form Start_Form = new Start_Form();
             Start_Form.ShowDialog();
             Close();
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -1,6 +1,6 @@
 ﻿namespace Sound_amp_kursach
 {
-    partial class Form1
+    partial class Player_Form
     {
         /// <summary>
         /// Обязательная переменная конструктора.

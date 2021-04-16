@@ -28,7 +28,7 @@ namespace Sound_amp_kursach
         private void Player_btn_Click(object sender, EventArgs e)
         {
             Start_Form.ActiveForm.Hide();
-            Form1 Player_form = new Form1();
+            Player_Form Player_form = new Player_Form();
             Player_form.ShowDialog();
             Close();
         }

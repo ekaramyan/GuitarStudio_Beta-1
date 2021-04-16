@@ -5,8 +5,6 @@ using CSCore.Codecs;
 using CSCore.CoreAudioAPI;
 using CSCore.SoundOut;
 
-/*медиаплеер, для проверки того, что было записано*/
-
 namespace Sound_amp_kursach
 {
     public class Player : Component

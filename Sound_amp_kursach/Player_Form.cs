@@ -1,21 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
-using CSCore;
+using CSCore.Codecs;
 using CSCore.CoreAudioAPI;
-using CSCore.SoundIn;
 using CSCore.SoundOut;
 using CSCore.Streams;
-using CSCore.Streams.Effects;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using CSCore.Codecs;
 
 
 
@@ -23,12 +14,13 @@ using CSCore.Codecs;
 namespace Sound_amp_kursach
 {
 
-    public partial class Form1 : Form
+    public partial class Player_Form : Form
     {
         private readonly Player _Player = new Player();
         private bool _stopSliderUpdate;
         private readonly ObservableCollection<MMDevice> _devices = new ObservableCollection<MMDevice>();
-        public Form1()
+
+        public Player_Form()
         {
             InitializeComponent();
             components = new Container();
@@ -106,7 +98,7 @@ namespace Sound_amp_kursach
                 try
                 {
                     _Player.Open(openFileDialog.FileName, (MMDevice)comboBox1.SelectedItem);
-                    volume_bar.Value = _Player.Volume;
+                    //volume_bar.Value = _Player.Volume;
 
                     Play_button.Enabled = true;
                     Pause_button.Enabled = Stop_button.Enabled = false;
