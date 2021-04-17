@@ -160,6 +160,7 @@ namespace Sound_amp_kursach
 
         private void Back_btn_Click(object sender, EventArgs e)
         {
+            _Player.Stop();
             this.Close();
             this.Hide();
             Start_Form Start_Form = new Start_Form();

@@ -18,8 +18,10 @@ namespace Sound_amp_kursach
 {
     public class Effecter : Component
     {
+        private ISoundOut _soundOut;
+        private readonly Live_Play _live = new Live_Play();
         //private WasapiCapture capture = null;
-       // private WaveWriter w = null;
+        // private WaveWriter w = null;
         public Single InGain;
         public Single Gain;
         public Single Edge;
@@ -37,9 +39,9 @@ namespace Sound_amp_kursach
             InGain = 10;
             var eSource = new DmoWavesReverbEffect(source);
             soundIn.Start();
-            var soundOut = new WasapiOut();
-            soundOut.Initialize(eSource);
-            soundOut.Play();
+            _soundOut = new WasapiOut();
+            _soundOut.Initialize(eSource);
+            _soundOut.Play();
         }
         public void Distortion()
         {
@@ -49,11 +51,13 @@ namespace Sound_amp_kursach
             Gain = 200;
             Edge = 155;
             PreLowpassCutoff = 56;
+            PostEQCenterFrequency = 100;
+            PostEQBandwidth = 10;
             var eSource = new DmoDistortionEffect(source);
             soundIn.Start();
-            var soundOut = new WasapiOut();
-            soundOut.Initialize(eSource);
-            soundOut.Play();
+            _soundOut = new WasapiOut();
+            _soundOut.Initialize(eSource);
+            _soundOut.Play();
         }
         public void Chorus()
         {
@@ -65,9 +69,14 @@ namespace Sound_amp_kursach
             Depth = 10;
             var eSource = new DmoChorusEffect(source);
             soundIn.Start();
-            var soundOut = new WasapiOut();
-            soundOut.Initialize(eSource);
-            soundOut.Play();
+            _soundOut = new WasapiOut();
+            _soundOut.Initialize(eSource);
+            _soundOut.Play();
+        }
+        public void Stop()
+        {
+            if (_soundOut != null)
+                _soundOut.Stop();
         }
     }
 }

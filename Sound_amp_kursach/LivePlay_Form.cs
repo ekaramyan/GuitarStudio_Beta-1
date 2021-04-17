@@ -33,6 +33,7 @@ namespace Sound_amp_kursach
         {
 
         }
+
         private void Play_btn_Click(object sender, EventArgs e)
         {
             try
@@ -48,6 +49,7 @@ namespace Sound_amp_kursach
         private void Stop_btn_Click(object sender, EventArgs e)
         {
             _live.stop();
+            _effects.Stop();
             /*
             if (w != null && capture != null)
             {
@@ -104,5 +106,6 @@ namespace Sound_amp_kursach
                 MessageBox.Show(exp.Message);
             }
         }
+
     }
 }

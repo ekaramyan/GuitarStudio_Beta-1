@@ -16,10 +16,12 @@ using CSCore.Codecs.WAV;
 
 namespace Sound_amp_kursach
 {
-   public class Live_Play : Component
+    
+    public class Live_Play : Component
     {
-        private WasapiCapture capture = null;
-        private WaveWriter w = null;
+        private ISoundOut _soundOut;
+        //private WasapiCapture capture = null;
+        //private WaveWriter w = null;
         //public var SoundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 30);
         public void play()
         {
@@ -28,13 +30,15 @@ namespace Sound_amp_kursach
             IWaveSource source = new SoundInSource(soundIn) { FillWithZeros = true };
             var eSource = new DmoCompressorEffect(source);
             soundIn.Start();
-            var soundOut = new WasapiOut();
-            soundOut.Initialize(eSource);
-            soundOut.Play();
+             _soundOut = new WasapiOut();
+            _soundOut.Initialize(eSource);
+            _soundOut.Play();
         }
         public void stop()
         {
-            if (w != null && capture != null)
+            if (_soundOut != null)
+                _soundOut.Stop();
+            /*if (w != null && capture != null)
             {
                 //stop recording 
                 capture.Stop();
@@ -42,7 +46,7 @@ namespace Sound_amp_kursach
                 w = null;
                 capture.Dispose();
                 capture = null;
-            }
+            }*/
         }
 
     }
