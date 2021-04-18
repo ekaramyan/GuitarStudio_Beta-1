@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
     //хрен знает, что тут описывать, в библиотеке все до меня придумано
     interface ILive

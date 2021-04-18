@@ -1,4 +1,4 @@
-﻿namespace Sound_amp_kursach
+﻿namespace DigitalGuitarAmp
 {
     partial class Recorder_Form
     {

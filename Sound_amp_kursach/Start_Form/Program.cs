@@ -10,7 +10,7 @@ using CSCore.SoundOut;
 using CSCore.Streams;
 using CSCore.Streams.Effects;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
     static class Program
     {

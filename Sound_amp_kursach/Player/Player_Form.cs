@@ -11,7 +11,7 @@ using CSCore.Streams;
 
 
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
 
     public partial class Player_Form : Form

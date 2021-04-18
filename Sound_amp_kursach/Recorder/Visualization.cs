@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
     public class Visualization
     {

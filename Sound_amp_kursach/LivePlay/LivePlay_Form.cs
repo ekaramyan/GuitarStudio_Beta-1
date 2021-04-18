@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
     public partial class LivePlay_Form : Form
     {
@@ -30,7 +30,7 @@ namespace Sound_amp_kursach
             _Chorus.Stop();
             try
             {
-                _live.play();
+                _live.Play();
             }
             catch (Exception exp)
             {
@@ -40,7 +40,7 @@ namespace Sound_amp_kursach
 
         private void Stop_btn_Click(object sender, EventArgs e)
         {
-            _live.stop();
+            _live.Stop();
             _distortion.Stop();
             _Rever.Stop();
             _Chorus.Stop();
@@ -69,7 +69,7 @@ namespace Sound_amp_kursach
         {
             _Chorus.Stop();
             _distortion.Stop();
-            _live.stop();
+            _live.Stop();
             try
             {
                 _Rever.Reverb();
@@ -84,7 +84,7 @@ namespace Sound_amp_kursach
         {
             _Chorus.Stop();
             _Rever.Stop();
-            _live.stop();
+            _live.Stop();
             try
             {
                 _distortion.Dist();
@@ -99,7 +99,7 @@ namespace Sound_amp_kursach
         {
             _distortion.Stop();
             _Rever.Stop();
-            _live.stop();
+            _live.Stop();
             try
             {
                 _Chorus.Chor();

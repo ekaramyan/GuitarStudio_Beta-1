@@ -14,7 +14,7 @@ using CSCore.Streams;
 using CSCore.Streams.Effects;
 using CSCore.Codecs.WAV;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
 
     class Chorus

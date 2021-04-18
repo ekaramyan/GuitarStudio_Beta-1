@@ -5,7 +5,7 @@ using CSCore.Codecs;
 using CSCore.CoreAudioAPI;
 using CSCore.SoundOut;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
     public class Player : Component
     {

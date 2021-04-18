@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
     public partial class Start_Form : Form
     {

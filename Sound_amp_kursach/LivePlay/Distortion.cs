@@ -7,12 +7,12 @@ using CSCore.Streams.Effects;
 using System;
 using System.ComponentModel;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
     public class Distortion : Component
     {
         private ISoundOut _soundOut;
-        private ILive _ILive;
+        //private ILive _ILive;
         public Single InGain;
         public Single Gain;
         public Single Edge;

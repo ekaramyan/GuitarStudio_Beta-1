@@ -14,13 +14,13 @@ using CSCore.Streams;
 using CSCore.Streams.Effects;
 using CSCore.Codecs.WAV;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
     
     public class Live_Play : Component
     {
         private ISoundOut _soundOut;
-        public void play()
+        public void Play()
         {
             var soundIn = new WasapiCapture(true, AudioClientShareMode.Shared, 10);
             soundIn.Initialize();
@@ -31,7 +31,7 @@ namespace Sound_amp_kursach
             _soundOut.Initialize(eSource);
             _soundOut.Play();
         }
-        public void stop()
+        public void Stop()
         {
             if (_soundOut != null)
                 _soundOut.Stop();

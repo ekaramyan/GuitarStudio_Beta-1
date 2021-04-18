@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sound_amp_kursach.Properties
+namespace DigitalGuitarAmp.Properties
 {
 
 

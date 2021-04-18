@@ -10,13 +10,13 @@ using CSCore.SoundIn;
 using CSCore.Streams;
 using CSCore.Win32;
 
-namespace Sound_amp_kursach
+namespace DigitalGuitarAmp
 {
     public partial class Recorder_Form : Form
     {
          //private readonly Devices _devices = new Devices();
         //Change this to CaptureMode.Capture to capture a microphone,...
-        private const CaptureMode CaptureMode = Sound_amp_kursach.CaptureMode.Capture;
+        private const CaptureMode CaptureMode = DigitalGuitarAmp.CaptureMode.Capture;
 
         private MMDevice _selectedDevice;
         private WasapiCapture _soundIn;
