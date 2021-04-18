@@ -61,51 +61,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Effecter.cs">
+    <Compile Include="LivePlay\Chorus.cs" />
+    <Compile Include="LivePlay\Distortion.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Player_Form.cs">
+    <Compile Include="LivePlay\ILive.cs" />
+    <Compile Include="Player\Player_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Player_Form.Designer.cs">
+    <Compile Include="Player\Player_Form.Designer.cs">
       <DependentUpon>Player_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="LivePlay_Form.cs">
+    <Compile Include="LivePlay\LivePlay_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LivePlay_Form.Designer.cs">
+    <Compile Include="LivePlay\LivePlay_Form.Designer.cs">
       <DependentUpon>LivePlay_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Live_Play.cs">
+    <Compile Include="LivePlay\Live_Play.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Player.cs">
+    <Compile Include="Player\Player.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Start_Form\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Recorder_Form.cs">
+    <Compile Include="Recorder\Recorder_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recorder_Form.Designer.cs">
+    <Compile Include="Recorder\Recorder_Form.Designer.cs">
       <DependentUpon>Recorder_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Start_Form.cs">
+    <Compile Include="LivePlay\Rever.cs" />
+    <Compile Include="Start_Form\Start_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Start_Form.Designer.cs">
+    <Compile Include="Start_Form\Start_Form.Designer.cs">
       <DependentUpon>Start_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visualization.cs" />
-    <EmbeddedResource Include="Player_Form.resx">
+    <Compile Include="Recorder\Visualization.cs" />
+    <EmbeddedResource Include="Player\Player_Form.resx">
       <DependentUpon>Player_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LivePlay_Form.resx">
+    <EmbeddedResource Include="LivePlay\LivePlay_Form.resx">
       <DependentUpon>LivePlay_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -113,10 +116,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Recorder_Form.resx">
+    <EmbeddedResource Include="Recorder\Recorder_Form.resx">
       <DependentUpon>Recorder_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Start_Form.resx">
+    <EmbeddedResource Include="Start_Form\Start_Form.resx">
       <DependentUpon>Start_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
